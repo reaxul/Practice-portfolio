@@ -1,5 +1,5 @@
 * {
-    margin: 0%;
+    margin: 0px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -89,7 +89,8 @@ main {
     text-align: center;
     border-radius: 10px;
     background: #FFF8F3;
-    padding: 130px 150px;
+    padding: 30px 150px;
+    margin-left: 110px;
 }
 
 .section-title {
@@ -98,10 +99,18 @@ main {
     font-size: 35px;
 }
 
+.section-title-description {
+    font-weight: 400;
+    font-size: 18px;
+    color: #757575;
+    text-align: center;
+}
+
 .section-description {
     color: #757575;
     font-size: 18px;
     margin-bottom: 30px;
+
 }
 
 .about-info-container {
@@ -120,4 +129,92 @@ main {
     font-weight: 700;
     font-size: 20px;
     color: #474747;
+}
+
+/* what i do section */
+.whatIdo-section {
+    margin-left: 110px;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 130px;
+}
+
+.skills-container {
+    display: flex;
+    gap: 24px;
+    text-align: center;
+    padding: 30px 150px;
+
+}
+
+.skills-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #181818;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.skills-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+}
+
+.skills {
+    background: #FFFFFF;
+    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+/* resume summery*/
+.resume{
+    margin-left: 110px;
+}
+.section-title{
+    margin-bottom: 110px;
+}
+.resume-content{
+    display: flex;
+    gap: 30px;
+}
+
+.h3-title {
+    font-weight: 700;
+    font-size: 30px;
+    color: #474747;
+}
+
+.h4-title {
+    font-weight: 700;
+    font-size: 25px;
+    color: #474747;
+}
+
+.h5-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #474747;
+}
+
+.resume-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.h3-title{
+    margin-bottom: 30px;
+}
+.h4-title{
+    margin-bottom: 10px;
+}
+.h5-title{
+    margin-bottom: 20px;
 }
