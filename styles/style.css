@@ -1,6 +1,20 @@
-* {
-    margin: 0px;
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Universal styles */
+body {
     font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding-top: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .header-background {
@@ -12,14 +26,10 @@
 
 
 /* header and navigation styles */
-nav {
-    justify-content: space-between;
-    padding: 50px 100px;
-    display: flex;
-}
 
 nav ul {
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -29,7 +39,8 @@ nav li {
 
 .nav-title {
     font-weight: 800;
-    font-size: 45px;
+    font-size: 36px;
+    color: #333;
 }
 
 nav li {
@@ -41,14 +52,21 @@ nav li {
 }
 
 .button-primary {
-    color: #FFFFFF;
+    display: inline-block;
     font-weight: 700;
-    font-size: 20px;
-    height: 64px;
-    background: #FD6E0A;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    border: 0;
-    padding: 18px 35px;
+    background: #FD6E0A;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button-primary:hover {
+    background: #FF5722;
 }
 
 /* banner style */
@@ -78,11 +96,6 @@ nav li {
 }
 
 /* main section */
-main {
-    width: 1140px;
-    height: 550px;
-    text-align: justify;
-}
 
 .about {
     margin-top: 130px;
@@ -131,30 +144,91 @@ main {
     color: #474747;
 }
 
-/* what i do section */
-.whatIdo-section {
-    margin-left: 110px;
+/* About section styles */
+.about {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px 0;
+    text-align: center;
 }
 
 .section-title {
+    font-weight: 700;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #757575;
+    margin-bottom: 30px;
+}
+
+.about-info-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-info {
+    flex-basis: calc(25% - 20px);
+    text-align: left;
+    margin: 10px;
+}
+
+.info-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-description {
+    font-weight: 400;
+    font-size: 18px;
+    color: #757575;
+}
+
+/* What I do section styles */
+.whatIdo-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px 0;
     text-align: center;
-    margin-top: 130px;
 }
 
 .skills-container {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
     text-align: center;
-    padding: 30px 150px;
+}
 
+.skills {
+    flex-basis: calc(50% - 20px);
+    background: #fff;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.skills img {
+    max-width: 80px;
+    height: auto;
+    margin: 0 auto 10px;
 }
 
 .skills-title {
     font-weight: 700;
     font-size: 20px;
-    color: #181818;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .skills-description {
@@ -163,43 +237,33 @@ main {
     color: #757575;
 }
 
-.skills {
-    background: #FFFFFF;
-    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
-    border-radius: 5px;
-    padding: 30px;
-}
-
-/* resume summery*/
+/* Resume section styles */
 .resume {
-    margin-left: 110px;
-}
-
-.section-title {
-    margin-bottom: 110px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px 0;
+    text-align: center;
 }
 
 .resume-content {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    margin-top: 20px;
 }
 
-.h3-title {
-    font-weight: 700;
-    font-size: 30px;
-    color: #474747;
+.resume-item {
+    text-align: left;
+    margin-bottom: 30px;
 }
 
-.h4-title {
-    font-weight: 700;
-    font-size: 25px;
-    color: #474747;
-}
-
+.h3-title,
+.h4-title,
 .h5-title {
-    font-weight: 600;
-    font-size: 20px;
-    color: #474747;
+    font-weight: 700;
+    color: #333;
 }
 
 .resume-description {
@@ -208,64 +272,137 @@ main {
     color: #757575;
 }
 
-hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
+/* Contact section styles */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px 0;
 }
 
-.h3-title {
-    margin-bottom: 30px;
-}
-
-.h4-title {
-    margin-bottom: 10px;
-}
-
-.h5-title {
-    margin-bottom: 20px;
-}
-
-.download-button {
-    margin-top: 50px;
-    margin-bottom: 113px;
+.contact-class,
+.message-class {
+    flex-basis: 50%;
     text-align: center;
 }
 
-/* contact styles */
 .contact-title {
-    text-align: left;
-}
-
-.contact {
-    display: flex;
-    gap: 117px;
-    background: #FFF8F3;
-}
-
-.contact-title {
-    margin-top: 122px;
-    margin-bottom: 28px;
-}
-
-.contact-class {
-    padding-left: 110px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .contact-paragraph {
-    margin-bottom: 30px;
+    font-size: 18px;
+    color: #757575;
+    margin-bottom: 20px;
 }
 
-.contact a {
+.contact-icons {
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #333;
     text-decoration: none;
 }
 
 .message-class textarea,
-input {
-    margin-bottom: 24px;
-    border: 0;
-    width: 80%;
-    padding: 18px 30px;
+.message-class input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
 }
-.message-class{
-    padding-bottom: 130px;
+
+.message-class button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    background: #FD6E0A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.message-class button:hover {
+    background: #FF5722;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 768px) {
+    /* Navbar styles for smaller screens */
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    /* Banner styles for smaller screens */
+    .banner {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner-title {
+        font-size: 36px;
+        margin-top: 10px;
+    }
+
+    img[src="images/Reaxul_with_mask.png"] {
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* About section styles for smaller screens */
+    .about-info-container {
+        flex-direction: column;
+    }
+
+    .about-info {
+        flex-basis: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Skills section styles for smaller screens */
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Resume section styles for smaller screens */
+    .resume-item {
+        margin-bottom: 20px;
+    }
+
+    /* Contact section styles for smaller screens */
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-class,
+    .message-class {
+        flex-basis: 100%;
+    }
 }
